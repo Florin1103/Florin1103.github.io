@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love4Paws</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Black_Paw.svg.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header + navbar -->
+    <header class="header">
+        <a href="#" class="logo">
+            <i class="fas fa-paw"> Love4Paws</i>
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#animal">Animals</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <div id="login-btn" class="fas fa-paw"></div>
+            <div id="menu-btn" class="fas fa-bars"></div> 
+        </div>
+        <form action="" class="login-form">
+            <h3>Login form</h3>
+            <input type="email" placeholder="Enter your email" class="box">
+            <input type="password" placeholder="Enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <a href="" class="btn">Login</a>
+        </form>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Learn about the <br>
+            animal kingdom<br>with our <br>
+            gorgeous friends</h3>
+            <a href="#gallery" class="btn">Meet the zoo</a>
+        </div>
+        <img src="images/bottom_wave.png" alt="bottom-page-wave" class="wave">
+    </section>
+    <!-- About section  -->
+    <section class="about" id="about">
+        <h2 class="deco-title">About us</h2>
+        <div class="box-container">
+            <div class="image">
+                <img src="images/panda-about.jpg" alt="about">
+            </div>
+            <div class="content">
+                <h3 class="title">Here you will find information to guide yourself in discovering the animal kingdom and all of its beauty.</h3>
+                <p>You can find many iconic species.Although all animal species are amazing in their own ways, some have captivated people around the world since their discovery.</p>
+                <div class="icons-container">
+                    <div class="icons">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>We educate</h3>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-child"></i>
+                        <h3>We play</h3>
+                    </div>
+                    <div class="icons">
+                        <i class="fas fa-book-open"></i>
+                        <h3>We learn together</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <h2 class="heading">Gallery</h2>
+        <div class="swiper gallery-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-1.jpg" alt="baby lion">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-2.jpg" alt="female lions">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-3.jpg" alt="baby lion">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-4.jpg" alt="male lion">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-5.jpg" alt="red panda">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-6.jpg" alt="hippopotamus">
+                    </div>
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/gallery-7.jpg" alt="arctic fox">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- Animals section -->
+    <section class="animal" id="animal">
+        <h2 class="heading">Animals</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/animal_1.jpg" alt="bear">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup1)">See details</button>
+                    <div class="popup" id="popup1">
+                        <h3>This is Mark</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup1)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_2.jpg" alt="zebra">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup2)">See details</button>
+                    <div class="popup" id="popup2">
+                        <h3>These are Julie and Jasper</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup2)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_3.jpg" alt="giraffe">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup3)">See details</button>
+                    <div class="popup" id="popup3">
+                        <h3>This is Captain</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup3)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_4.jpg" alt="monkey">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup4)">See details</button>
+                    <div class="popup" id="popup4">
+                        <h3>This is Chilli</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup4)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_5.jpg" alt="serval">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup5)">See details</button>
+                    <div class="popup" id="popup5">
+                        <h3>This is Sandy</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup5)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_6.jpg" alt="raccoon">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup6)">See details</button>
+                    <div class="popup" id="popup6">
+                        <h3>This is Chomper</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup6)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animal_7.jpg" alt="wolf">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup7)">See details</button>
+                    <div class="popup" id="popup7">
+                        <h3>This is Malcolm</h3>
+                        <button type="button" class="btn" onclick="closePopup(popup7)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_8.jpg" alt="gorilla">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup8)">See details</button>
+                    <div class="popup" id="popup8">
+                        <h3>This is Grease </h3>
+                        <button type="button" class="btn" onclick="closePopup(popup8)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_9.jpg" alt="white tiger">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup9)">See details</button>
+                    <div class="popup" id="popup9">
+                        <h3>This is Spencer </h3>
+                        <button type="button" class="btn" onclick="closePopup(popup9)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_10.jpg" alt="koala bear">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup10)">See details</button>
+                    <div class="popup" id="popup10">
+                        <h3>This is Kapcha </h3>
+                        <button type="button" class="btn" onclick="closePopup(popup10)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_11.jpeg" alt="panther">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup11)">See details</button>
+                    <div class="popup" id="popup11">
+                        <h3>This is Farrow </h3>
+                        <button type="button" class="btn" onclick="closePopup(popup11)">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/animals_12.jpg" alt="kangaroo">
+                <div class="content">
+                    <button type="button" class="btn" onclick="openPopup(popup12)">See details</button>
+                    <div class="popup" id="popup12">
+                        <h3>This is Jack </h3>
+                        <button type="button" class="btn" onclick="closePopup(popup12)">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner section -->
+    <section class="banner">
+        <div class="row">
+            <div class="content">
+                <h3>Spend quality time with animals</h3>
+                <p>The bonds that we create by interacting with animals make us more responsible and aware of the world surrounding us. Learning to co-habitate with species of all shapes and sizes teaches us to live in a sustainable manner.</p>
+            </div>
+            <div class="image">
+                <img src="images/banner_1.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Pricing section -->
+    <section class="pricing" id="pricing">
+        <h2 class="heading">Pricing</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/pricing6.jpg" alt="">
+                <h3>Individuals</h3>
+                <h4 class="price">$ 10</h4>
+                <p>Buy a ticket and you will get a two dollars coupon for next visit.</p>
+            </div>
+            <div class="box">
+                <img src="images/pricing7.jpg" alt="">
+                <h3>School</h3>
+                <h4 class="price">$ 20</h4>
+                <p>Up to 30 persons.</p>
+            </div>
+            <div class="box">
+                <img src="images/pricing5.jpg" alt="">
+                <h3>Family</h3>
+                <h4 class="price">$ 30</h4>
+                <p>Visit our zoo and you will get free souvenirs for children.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact</h2>
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Number">
+                <input type="text" placeholder="Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <a href="#" class="btn">Send message</a>
+        </form>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3><i class="fas fa-paw">Love4Paws</i></h3>
+                <p>For more information , do not hesitate to reach out.</p>
+                <p class="links"><i class="fas fa-clock">Monday - Friday</i></p>
+                <p class="days">7:00am - 11:00pm</p>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fas fa-phone"></i>1234-678-9999</a>
+                <a href="#" class="links"><i class="fas fa-phone"></i>2143-876-0990</a>
+                <a href="#" class="links"><i class="fas fa-envelope"></i>info@love4paws.com</a>
+                <a href="#" class="links"><i class="fas fa-map-marker-alt"></i>Iasi , Romania</a>
+            </div>
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i>About</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Gallery</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Animals</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Pricing</a>
+            </div>
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>Subscribe for latest updates</p>
+                <input type="email" placeholder="Your email here" class="email">
+                <a href="#" class="btn">Subscribe</a>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+        <div class="credit">&copy; 2023 Love 4 Paws. All rights reserved <a href="https://www.linkedin.com/in/florinboboc1192/" target="_blank">Florin Boboc</a>.</div>
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
