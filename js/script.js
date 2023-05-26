@@ -19,8 +19,6 @@ document.addEventListener("click", (event) => {
         navbar.classList.remove('active')
 }
 });
-
-document.addEventListener("touchstart", handleTouchStart);
 // Gallery swiper
 let swiper = new Swiper(".gallery-slider", {
     grabCursor:true,
