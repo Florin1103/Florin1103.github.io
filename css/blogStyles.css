@@ -202,7 +202,7 @@ section {
 /* Contact */
 
 .contact {
-  background: var(--bg);
+  background: url(../images/blog-footer.jpg) no-repeat;
 }
 .contact form {
   padding: 2rem 10%;
@@ -230,6 +230,9 @@ section {
   height: 15rem;
   resize: none;
   width: 100%;
+}
+.contact h2 {
+  color: var(--black);
 }
 /* Footer */
 .footer {
