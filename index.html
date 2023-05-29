@@ -31,15 +31,14 @@
         </div>
         <form action="" class="login-form">
             <h3>Login form</h3>
-            <input type="text" placeholder="Enter your email" class="box">
-            <input type="password" placeholder="Enter your password" class="box">
+            <input type="text" name="username" placeholder="Enter your username" class="box">
+            <input type="password" name="password" placeholder="Enter your password" class="box">
             <div class="remember">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">Remember me</label>
             </div>
             <button type="button" class="btn">Login</button>
         </form>
-        
     </header>
     <section class="home" id="home">
         <div class="content">
@@ -76,6 +75,7 @@
                 </div>
             </div>
         </div>
+        <img src="images/bottom_wave.png" alt="bottom-page-wave" class="wave">
     </section>
     <!-- Gallery -->
     <section class="gallery" id="gallery">
@@ -321,26 +321,27 @@
             </div>
             <div class="box">
                 <h3>Quick links</h3>
-                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Home</a>
-                <a href="#" class="links"><i class="fas fa-arrow-right"></i>About</a>
-                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Gallery</a>
-                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Animals</a>
-                <a href="#" class="links"><i class="fas fa-arrow-right"></i>Pricing</a>
+                <a href="#home" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#about" class="links"><i class="fas fa-arrow-right"></i>About</a>
+                <a href="#gallery" class="links"><i class="fas fa-arrow-right"></i>Gallery</a>
+                <a href="#animals" class="links"><i class="fas fa-arrow-right"></i>Animals</a>
+                <a href="#pricing" class="links"><i class="fas fa-arrow-right"></i>Pricing</a>
+                <a href="blog.html" target="_blank" class="links"><i class="fas fa-blog"></i>Blog</a>
             </div>
             <div class="box">
                 <h3>Newsletter</h3>
                 <p>Subscribe for latest updates</p>
-                <input type="email" name="email" placeholder="Your email here" class="email">
-                <a href="#" class="btn">Subscribe</a>
+                <form action="https://formspree.io/f/mzbqqyaq" method="POST">
+                    <input type="email" name="email" placeholder="Your email here" class="email">
+                    <button class="btn">Subscribe</button>
+                </form>
                 <div class="share">
-                    <a href="#" class="fab fa-facebook"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="https://github.com/Florin1103" target="_blank" class="fab fa-github"></a>
+                    <a href="https://www.linkedin.com/in/florinboboc1192/" target="_blank" class="fab fa-linkedin"></a>
                 </div>
             </div>
         </div>
-        <div class="credit">&copy; 2023 Love 4 Paws. All rights reserved <a href="https://www.linkedin.com/in/florinboboc1192/" target="_blank">Florin Boboc</a>.</div>
+        <div class="credit">&copy; <span id="year"></span> Love 4 Paws. All rights reserved <a href="https://www.linkedin.com/in/florinboboc1192/" target="_blank">Florin Boboc</a>.</div>
     </section>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

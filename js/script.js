@@ -46,3 +46,8 @@ function openPopup(popup) {
 function closePopup(popup) {
     popup.classList.remove("open-popup");
 }
+// Year automatically update
+const yearSpan = document.getElementById('year');
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
+

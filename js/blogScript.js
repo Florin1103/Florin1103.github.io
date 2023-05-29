@@ -30,11 +30,9 @@ document.addEventListener("click", (event) => {
 };
 });
 // Local storage responsive buttons
-// Retrieve accounts from local storage or initialize an empty array
 let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 
 if (accounts.length > 0) {
-  // Fill the login form with the first account in the array
   document.getElementById("username").value = accounts[0].username;
   document.getElementById("password").value = accounts[0].password;
 }
@@ -43,7 +41,6 @@ document.getElementById("login-button").addEventListener("click", function() {
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
 
-  // Check if the entered username and password match any account
   let matchedAccount = accounts.find(function(account) {
     return account.username === username && account.password === password;
   });
@@ -54,7 +51,6 @@ document.getElementById("login-button").addEventListener("click", function() {
     alert("Invalid username or password!");
   }
 
-  // Hide the login form
   document.getElementById("login-form").style.display = "none";
 });
 
@@ -71,16 +67,13 @@ document.getElementById("signup-form").addEventListener("submit", function(event
     password: password
   };
 
-  // Add the new account to the array
   accounts.push(newAccount);
 
-  // Store the updated accounts array in local storage
   localStorage.setItem("accounts", JSON.stringify(accounts));
 
   alert("Account created successfully!");
   document.getElementById("signup-form").reset();
 
-  // Hide the sign-up form
   document.getElementById("signup-form").style.display = "none";
 });
 

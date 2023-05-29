@@ -44,7 +44,7 @@ section {
   text-align: center;
   font-size: 4rem;
   color: var(--main);
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 3rem;
   padding: 1.2rem 0;
 }
@@ -132,7 +132,21 @@ section {
   width: 35rem;
   padding: 2rem;
 }
+.header .signup-form {
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: var(--white);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  width: 45rem;
+  padding: 2rem;
+}
 .header .login-form.active {
+  right: 2rem;
+  transition: .4s linear;
+}
+.header .signup-form.active {
   right: 2rem;
   transition: .4s linear;
 }
@@ -143,7 +157,23 @@ section {
   margin-bottom: 0.7rem;
   text-align: center;
 }
+.header .signup-form h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
 .header .login-form .box {
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
+  border: .1rem solid rgba(0, 0, 0, 0.1);
+  margin: .7rem 0;
+  color: var(--black);
+  width: 100%;
+  text-transform: none;
+}
+.header .signup-form .box {
   font-size: 1.5rem;
   padding: 1rem 1.2rem;
   border: .1rem solid rgba(0, 0, 0, 0.1);
@@ -176,13 +206,17 @@ section {
   width: 100%;
   text-align: center;
 }
+.header .signup-form .btn {
+  width: 100%;
+  text-align: center;
+}
 
 /* Home */
 .home {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../images/home3.jpg);
+  background: url(../images/panda-home.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -190,10 +224,11 @@ section {
   max-width: 60rem;
 }
 .home .content h3 {
-  color: var(--white);
+  color: var(--main);
   font-size: 6rem;
   line-height: 1.4;
   font-weight: 400;
+  font-family:'Delicious handrawn';
 }
 .home .wave {
   position: absolute;
@@ -377,7 +412,7 @@ gap: 2rem;
   background: var(--bg);
   padding: 3rem;
   text-align: center;
-  border-radius: 79% 51% 81% 19% / 58% 93% 7% 43%;  /* undefined shape for box*/
+  border-radius: 33% 51% 81% 19% / 58% 93% 7% 43%;  /* undefined shape for box*/
 }
 .pricing .box-container .box:hover {
   border-radius: .5rem;
@@ -386,7 +421,7 @@ gap: 2rem;
   height: 15.5rem;
   width: 15.5rem;
   margin-bottom: .5rem;
-  border-radius: 80% 21% 40% 66% / 44% 33% 29% 76%;  /* undefined shape for img*/
+  border-radius: 51% 27% 47% 80% / 55% 44% 31% 80%;  /* undefined shape for img*/
 }
 .pricing .box-container .box h3 {
   font-size: 2.6rem;
@@ -438,7 +473,7 @@ gap: 2rem;
 }
 /* Footer */
 .footer {
-  background: url(../images/footer.jpg) no-repeat;
+  background: url(../images/footer-background.jpg) no-repeat;
   background-size: cover;
   padding: 3rem 7%;
 }
@@ -506,7 +541,7 @@ gap: 2rem;
   text-align: center;
   margin-top: 2rem;
   padding-top: 2.5rem;
-  color: var(--black);
+  color: var(--white);
   border-top: .2rem solid black;
 }
 .footer .credit .link {
