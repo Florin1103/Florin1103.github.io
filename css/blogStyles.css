@@ -221,6 +221,7 @@ section {
   margin: 1rem 0;
   border-radius: .5rem;
   text-transform: none;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .contact form .inputBox input::placeholder,
 .contact form textarea::placeholder {
@@ -234,6 +235,16 @@ section {
 .contact h2 {
   color: var(--black);
 }
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--black);
+}
+  
+.form-textarea {
+  color: var(--black)
+}
+
+
 /* Footer */
 .footer {
   background: url(../images/footer.jpg) no-repeat;
