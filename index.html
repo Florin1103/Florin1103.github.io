@@ -22,6 +22,7 @@
             <a href="#gallery">Gallery</a>
             <a href="#animal">Animals</a>
             <a href="#pricing">Pricing</a>
+            <a href="blog.html">Blog</a>
             <a href="#contact">Contact</a>
         </nav>
         <div class="icons">
@@ -30,14 +31,15 @@
         </div>
         <form action="" class="login-form">
             <h3>Login form</h3>
-            <input type="email" placeholder="Enter your email" class="box">
+            <input type="text" placeholder="Enter your email" class="box">
             <input type="password" placeholder="Enter your password" class="box">
             <div class="remember">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">Remember me</label>
             </div>
-            <a href="" class="btn">Login</a>
+            <button type="button" class="btn">Login</button>
         </form>
+        
     </header>
     <section class="home" id="home">
         <div class="content">
@@ -285,17 +287,18 @@
     <!-- Contact section -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact</h2>
-        <form action="">
+        <form action="https://formspree.io/f/mzbqqyaq" method="POST">
             <div class="inputBox">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
             </div>
             <div class="inputBox">
-                <input type="text" placeholder="Number">
-                <input type="text" placeholder="Subject">
+                <input type="text" name="number" placeholder="Number">
+                <input type="text" name="subject" placeholder="Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <a href="#" class="btn">Send message</a>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <!-- <a href="#" class="btn">Send message</a> -->
+            <button type="submit" class="btn">Send message</button>
         </form>
     </section>
     <!-- Footer -->

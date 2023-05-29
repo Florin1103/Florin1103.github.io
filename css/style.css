@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
-        /*Scrollbar  */
+       /*Scrollbar  */
 html::-webkit-scrollbar {
   width: 1rem;
 }
@@ -142,6 +142,15 @@ section {
   text-transform: uppercase;
   margin-bottom: 0.7rem;
   text-align: center;
+}
+.header .login-form .box {
+  font-size: 1.5rem;
+  padding: 1rem 1.2rem;
+  border: .1rem solid rgba(0, 0, 0, 0.1);
+  margin: .7rem 0;
+  color: var(--black);
+  width: 100%;
+  text-transform: none;
 }
 .header .login-form .box {
   font-size: 1.5rem;

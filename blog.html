@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love4Paws - Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/blogStyles.css">
+  <link rel="shortcut icon" href="Black_Paw.svg.png" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">
+        <i class="fas fa-paw"> Love4Paws - Blog</i>
+    </a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="icons">
+        <div id="login-btn" class="fas fa-paw"></div>
+        <div id="menu-btn" class="fas fa-bars"></div> 
+        <div id="signup-btn" class="fas fa-hat-cowboy-side"></div>
+    </div>
+    <form action="" class="login-form" id="login-form">
+        <h3>Login form</h3>
+        <input type="text" name="username" id="username" placeholder="Enter your username" required class="box">
+        <input type="password" name="password" id="password" placeholder="Enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">Remember me</label>
+        </div>
+        <button type="button" class="btn navbar-button" id="login-button">Login</button>
+      </form>
+      <form onsubmit="signup()" class="signup-form" id="signup-form">
+        <h3>Sign up</h3>
+        <input type="text" name="username" id="username-signup" placeholder="Enter your username" required class="box">
+        <input type="email" name="email" id="email-signup" placeholder="Enter your email" class="box" required>
+        <input type="password" name="password" id="password-signup" placeholder="Enter your password" class="box" required>
+        <button class="btn" type="submit">Create Account</button>
+      </form>
+</header>
+<section class="home" id="home">
+    <div class="content">
+
+    </div>
+</section>
+<script src="js/blockscript.js"></script>
+</body>
+</html>
