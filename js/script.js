@@ -19,6 +19,7 @@ document.addEventListener("click", (event) => {
         navbar.classList.remove('active')
 }
 });
+
 // Gallery swiper
 let swiper = new Swiper(".gallery-slider", {
     grabCursor:true,
@@ -38,7 +39,6 @@ let swiper = new Swiper(".gallery-slider", {
         },
     }
 });
-
 // Pop up buttons from Animals section
 function openPopup(popup) {
     popup.classList.add("open-popup");
@@ -50,4 +50,37 @@ function closePopup(popup) {
 const yearSpan = document.getElementById('year');
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
+
+// Automatic message
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      var messageBox = document.getElementById("message-box");
+      messageBox.style.display = "block";
+      messageBox.style.transition = "width 0.4s, height 0.4s";
+      messageBox.style.width = "200px";
+      messageBox.style.height = "100px";
+  
+      setTimeout(function() {
+        messageBox.style.width = "500px";
+        messageBox.style.height = "250px";
+  
+        setTimeout(function() {
+          var textElement = messageBox.querySelector("h3");
+          textElement.style.transition = "transform 0.4s";
+          textElement.style.transform = "translateX(0)"; 
+        }, 300); 
+      }, 100);effect
+    }, 4000);
+  });
+  
+  document.addEventListener("click", function(event) {
+    let messageBox = document.getElementById("message-box");
+    let targetElement = event.target;
+  
+    if (targetElement === messageBox || messageBox.contains(targetElement)) {
+      messageBox.style.display = "none";
+    }
+  });
+  
+  
 

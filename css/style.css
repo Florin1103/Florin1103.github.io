@@ -3,13 +3,14 @@
 
 :root {
   --main: #ff6e01;
-  --bg: papayawhip;
+  --bg: rgb(234, 214, 180);
   --black: black;
   --white: white;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  --papaya: papayawhip;
 }
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Delicious Handrawn', 'Roboto', sans-serif;
   margin: 0; padding: 0;
   box-sizing: border-box;
   outline: none; border: none;
@@ -18,7 +19,7 @@
   transition: .2s linear;
 }
 html {
-  font-size: 62.5%;
+  font-size: 80%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
@@ -85,7 +86,7 @@ section {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: var(--white);
+  background: var(--papaya);
   box-shadow: var(--box-shadow);
   display: flex;
   align-items: center;
@@ -126,7 +127,7 @@ section {
   position: absolute;
   top: 115%;
   right: -105%;
-  background: var(--white);
+  background: var(--papaya);
   border-radius: .5rem;
   box-shadow: var(--box-shadow);
   width: 35rem;
@@ -216,7 +217,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../images/panda-home.jpg);
+  background: url(../images/home3.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -293,6 +294,9 @@ section {
   padding: 3rem 2rem;
   border-radius: 10rem;
 }
+.about .content .icons-container .icons:hover {
+  border-radius: .5rem;
+}
 .about .content .icons-container .icons .fas {
   height: 5rem;
   font-size: 4rem;
@@ -323,6 +327,10 @@ section {
 .swiper-button-prev {
 color: var(--white);
 }
+/* Animals section  */
+.animal {
+  background: var(--papaya);
+}
 .animal .box-container {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
@@ -332,6 +340,7 @@ gap: 2rem;
   height: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 10%;
 }
 .animal .box-container .box img {
   height: 100%;
@@ -373,7 +382,7 @@ gap: 2rem;
 }
 /* Banner - short description */
 .banner {
-  background: url(../images/banner.png) no-repeat;
+  background: url(../images/papayawhip-banner.jpg) no-repeat;
 }
 .banner .row {
   display: flex;
@@ -403,6 +412,9 @@ gap: 2rem;
   width: 100%;
 }
 /* Pricing  */
+.pricing {
+  background: var(--papaya);
+}
 .pricing .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -584,8 +596,30 @@ gap: 2rem;
 .hidden {
   display: none;
 }
-
-
+.message-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  border-radius: 5%;
+}
+.message-box h3 {
+  font-size: 3.5rem;
+  color: var(--main);
+  font-family: 'Delicious Handrawn', 'Roboto', sans-serif;
+}
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
 /* Media queries */
 @media(max-width: 991px) {
   html{

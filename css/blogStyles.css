@@ -9,7 +9,7 @@
  }
  /* Predefined characteristics that may undergo changes later */
  * {
-  font-family: 'Playfair Display', sans-serif;
+  font-family:'Delicious handrawn', 'Playfair Display', sans-serif;
   margin: 0; padding: 0;
   box-sizing: border-box;
   outline: none; border: none;
@@ -18,7 +18,7 @@
   transition: .2s linear;
 }
 html {
-  font-size: 62.5%;
+  font-size: 80%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
@@ -323,4 +323,21 @@ section {
 }
 .footer .credit a:visited {
   color: var(--main);
+}
+/* Media queries */
+@media(max-width: 991px) {
+  html{
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  .section {
+    padding: 8rem 2rem;
+  }
+}
+@media(max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
 }
