@@ -47,12 +47,16 @@ document.getElementById("login-button").addEventListener("click", function() {
 
   if (matchedAccount) {
     alert("Login successful!");
+
+    // Update the username display in the navbar
+    document.getElementById("username-display").textContent = username;
   } else {
     alert("Invalid username or password!");
   }
 
   document.getElementById("login-form").style.display = "none";
 });
+
 
 document.getElementById("signup-form").addEventListener("submit", function(event) {
   event.preventDefault();
@@ -78,8 +82,34 @@ document.getElementById("signup-form").addEventListener("submit", function(event
 });
 
 
+
 // Year automatically update
 const yearSpan = document.getElementById('year');
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
 
+// Chat popup text box 
+
+let buttons = document.getElementsByClassName("btn");
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    let popup = this.nextElementSibling;
+    popup.classList.add("show-popup");
+    popup.addEventListener("click", function() {
+      this.classList.remove("show-popup");
+    });
+  });
+}
+document.addEventListener("click", function(e) {
+  if (!e.target.matches(".popup") && !e.target.matches(".btn")) {
+    let popups = document.getElementsByClassName("popup");
+        for (let i = 0; i < popups.length; i++) {
+      popups[i].classList.remove("show-popup");
+    }
+  }
+});
+// Log out form
+document.getElementById("username-display").addEventListener("click", function() {
+  let form = document.querySelector(".username-display");
+  form.classList.toggle("visible");
+});

@@ -662,7 +662,7 @@ gap: 2rem;
     display: none;
   }
 }
-@media (max-width: 450ox) {
+@media (max-width: 450px) {
   html {
     font-size: 50%;
   }

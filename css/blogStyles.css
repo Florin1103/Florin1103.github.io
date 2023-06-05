@@ -43,7 +43,7 @@ section {
   text-align: center;
   font-size: 4rem;
   color: var(--main);
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 3rem;
   padding: 1.2rem 0;
 }
@@ -100,6 +100,11 @@ section {
   color: var(--main);
 }
 .header .navbar a{
+  font-size: 2.3rem;
+  color: var(--black);
+  margin: 0 1rem;
+}
+.header .icons a {
   font-size: 1.7rem;
   color: var(--black);
   margin: 0 1rem;
@@ -199,7 +204,105 @@ section {
   width: 100%;
   text-align: center;
 }
-/* Contact */
+.username-display {
+  display: none;
+}
+
+.username-display.visible {
+  display: block;
+}
+/* Chat section */
+.chat {
+  background: var(--papaya);
+}
+.chat .box-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+.chat .box-container .box {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  padding-bottom: 75%;
+}
+.chat .box-container .box img {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+.chat .box-container .box:hover img {
+  transform: scale(1.1);
+}
+.chat .box-container .box .content {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 20px;
+  z-index: 1;
+  transform: 0.5s ease;
+}
+.chat .box-container .box:hover::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0.5;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.chat .box-container .box .content h3 {
+  font-family: 'Delicious Handrawn', cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: #ff6e01;
+}
+.chat .box-container box:is(:hover, :focus-within) .content {
+  transform: translateY(-20px);
+}
+.popup {
+  display: none;
+}
+
+.show-popup {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 25%;
+  width: 50%;
+  height: 80%;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+  font-size: 24px;
+}
+.hidden-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.box:hover .hidden-button {
+  opacity: 1;
+}
+.chat .box-container .box .content .btn {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* Contact section*/
 
 .contact {
   background: url(../images/blog-footer.jpg) no-repeat;
@@ -339,5 +442,53 @@ section {
 @media(max-width: 768px) {
   #menu-btn {
     display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0; right: 0;
+    background: var(--white);
+    border-top: .1rem solid var(--main);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  .chat .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .chat .box-container .box .content h3 {
+    font-size: 1.5rem;
+  }
+
+  .show-popup {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .chat .box-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .chat .box-container .box .content h3 {
+    font-size: 1rem;
+  }
+
+  .show-popup {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home .content h3 {
+    font-size: 4rem;
   }
 }
