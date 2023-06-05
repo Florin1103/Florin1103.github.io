@@ -64,6 +64,9 @@ section {
   overflow: hidden;
   
 }
+:placeholder-shown {
+  background-color:burlywood;
+}
 .btn::before {
   content: '';
   position: absolute;
