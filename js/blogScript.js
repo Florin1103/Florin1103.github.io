@@ -115,4 +115,65 @@ document.getElementById("username-display").addEventListener("click", function()
 });
 
 
+// Review form
+document.addEventListener("DOMContentLoaded", function() {
+  const nameInput = document.getElementById("name");
+  const reviewInput = document.getElementById("review");
+  const submitButton = document.getElementById("submit-review");
+  const reviewList = document.querySelector(".review-list");
+
+
+  const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+  function createReviewItem(name, review) {
+    const reviewItem = document.createElement("div");
+    reviewItem.classList.add("review-item");
+
+    const nameHeading = document.createElement("h3");
+    nameHeading.textContent = name;
+
+    const reviewText = document.createElement("p");
+    reviewText.textContent = review;
+
+    reviewItem.appendChild(nameHeading);
+    reviewItem.appendChild(reviewText);
+
+    return reviewItem;
+  }
+
+  function displayReviews() {
+    reviews.forEach(function(review) {
+      const { name, review: text } = review;
+      const reviewItem = createReviewItem(name, text);
+      reviewList.appendChild(reviewItem);
+    });
+  }
+
+  function saveReview(name, review) {
+    const newReview = {
+      name: name,
+      review: review
+    };
+    reviews.push(newReview);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  }
+
+  submitButton.addEventListener("click", function() {
+    const name = nameInput.value;
+    const review = reviewInput.value;
+    if (name && review) {
+      const reviewItem = createReviewItem(name, review);
+      reviewList.appendChild(reviewItem);
+      saveReview(name, review);
+      nameInput.value = "";
+      reviewInput.value = "";
+    } else {
+      alert("Please enter your name and review.");
+    }
+  });
+  displayReviews();
+});
+
+
+
 
