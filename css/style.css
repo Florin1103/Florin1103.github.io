@@ -19,7 +19,7 @@
   transition: .2s linear;
 }
 html {
-  font-size: 80%;
+  font-size: 90%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
