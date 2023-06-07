@@ -1,34 +1,41 @@
 // Login toggle
-let login = document.querySelector(".login-form"); 
+const loginForm = document.querySelector(".login-form");
+const navbar = document.querySelector('.header .navbar');
+const sgnupForm = document.querySelector(".signup-form");
+const loginButton = document.getElementById("login-button");
+const signupForm = document.getElementById("signup-form");
 
-document.querySelector("#login-btn").onclick = () =>{
-    login.classList.toggle('active');
+document.querySelector("#login-btn").onclick = () => {
+  loginForm.classList.toggle('active');
 }
-let navbar = document.querySelector('.header .navbar');
-document.querySelector('#menu-btn').onclick = () =>{
-    login.classList.remove('active');
-    navbar.classList.toggle('active')
-}  
-document.addEventListener("click", (event) => {
-        if (!event.target.closest(".login-form") && !event.target.closest("#login-btn")) {
-        login.classList.remove('active');
-    }
-});
-document.addEventListener("click", (event) => {
-    if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
-        navbar.classList.remove('active')
-}
-});
-let sgnupForm = document.querySelector(".signup-form"); 
 
-document.querySelector("#signup-btn").onclick = () =>{
-    sgnupForm.classList.toggle('active');
+document.querySelector('#menu-btn').onclick = () => {
+  loginForm.classList.remove('active');
+  navbar.classList.toggle('active');
 }
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".login-form") && !event.target.closest("#login-btn")) {
+    loginForm.classList.remove('active');
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
+    navbar.classList.remove('active');
+  }
+});
+
+document.querySelector("#signup-btn").onclick = () => {
+  sgnupForm.classList.toggle('active');
+}
+
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".signup-form") && !event.target.closest("#signup-btn")) {
-  sgnupForm.classList.remove('active');
-};
+    sgnupForm.classList.remove('active');
+  }
 });
+
 // Local storage responsive buttons
 let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 
@@ -37,7 +44,7 @@ if (accounts.length > 0) {
   document.getElementById("password").value = accounts[0].password;
 }
 
-document.getElementById("login-button").addEventListener("click", function() {
+loginButton.addEventListener("click", function() {
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
 
@@ -50,15 +57,17 @@ document.getElementById("login-button").addEventListener("click", function() {
 
     // Update the username display in the navbar
     document.getElementById("username-display").textContent = username;
+
+    // Store the logged-in status in localStorage
+    localStorage.setItem("isLoggedIn", true);
   } else {
     alert("Invalid username or password!");
   }
 
-  document.getElementById("login-form").style.display = "none";
+  loginForm.style.display = "none";
 });
 
-
-document.getElementById("signup-form").addEventListener("submit", function(event) {
+signupForm.addEventListener("submit", function(event) {
   event.preventDefault();
 
   let username = document.getElementById("username-signup").value;
@@ -76,10 +85,22 @@ document.getElementById("signup-form").addEventListener("submit", function(event
   localStorage.setItem("accounts", JSON.stringify(accounts));
 
   alert("Account created successfully!");
-  document.getElementById("signup-form").reset();
+  signupForm.reset();
 
-  document.getElementById("signup-form").style.display = "none";
+  sgnupForm.style.display = "none";
 });
+
+// Check if the user is logged in on page load
+window.addEventListener("load", function() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedIn) {
+    const username = accounts[0].username;
+    document.getElementById("username-display").textContent = username;
+    loginForm.style.display = "none";
+  }
+});
+
 
 
 
