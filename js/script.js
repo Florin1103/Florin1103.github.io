@@ -54,7 +54,7 @@ yearSpan.textContent = currentYear;
 // Automatic message
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
-      var messageBox = document.getElementById("message-box");
+      let messageBox = document.getElementById("message-box");
       messageBox.style.display = "block";
       messageBox.style.transition = "width 0.4s, height 0.4s";
       messageBox.style.width = "200px";
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
         messageBox.style.height = "250px";
   
         setTimeout(function() {
-          var textElement = messageBox.querySelector("h3");
+          let textElement = messageBox.querySelector("h3");
           textElement.style.transition = "transform 0.4s";
           textElement.style.transform = "translateX(0)"; 
         }, 300); 
