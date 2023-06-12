@@ -436,18 +436,18 @@ gap: 2rem;
   border-radius: .5rem;
 }
 .pricing .box-container .box img {
-  height: 18rem;
-  width: 18rem;
+  height: 15.5rem;
+  width: 15.5rem;
   margin-bottom: .5rem;
   border-radius: 51% 27% 47% 80% / 55% 44% 31% 80%;  /* undefined shape for img*/
 }
 .pricing .box-container .box h3 {
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: var(--black);
   padding: 1rem;
 }
 .pricing .box-container .box .price {
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: var(--main);
   padding: .5rem;
 }
