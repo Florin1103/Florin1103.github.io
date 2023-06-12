@@ -241,6 +241,9 @@ section {
   height: 12rem;
 }
 /* About */
+.about {
+  background: var(--papaya);
+}
 .about .box-container {
   display: flex;
   align-items: center;
@@ -261,7 +264,7 @@ section {
   position: absolute;
   top: 115%;
   left: 48%;
-  z-index: -1;
+  z-index: 1;
 }
 .about .box-container .image {
   flex: 1 1 28.1rem;
@@ -278,8 +281,8 @@ section {
   color: var(--black);
 }
 .about .content p {
-  font-size: 1.7rem;
-  color: #444;
+  font-size: 2rem;
+  color: var(--black);
   padding: 1rem;
   line-height: 2;
   text-align: justify;
@@ -307,8 +310,8 @@ section {
 }
 .about .content .icons-container .icons h3 {
   padding-top: 1rem;
-  font-size: 1.5rem;
-  color: #444;
+  font-size: 1.8rem;
+  color: var(--black);
   font-weight: normal;
 }
 /* Animals gallery slider*/
@@ -397,11 +400,11 @@ gap: 2rem;
   flex: 1 1 39rem;
 }
 .banner .row .content h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--main);
 }
 .banner .row .content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: var(--black);
   padding: 1rem 0;
   line-height: 1.8;
@@ -433,23 +436,23 @@ gap: 2rem;
   border-radius: .5rem;
 }
 .pricing .box-container .box img {
-  height: 15.5rem;
-  width: 15.5rem;
+  height: 18rem;
+  width: 18rem;
   margin-bottom: .5rem;
   border-radius: 51% 27% 47% 80% / 55% 44% 31% 80%;  /* undefined shape for img*/
 }
 .pricing .box-container .box h3 {
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--black);
   padding: 1rem;
 }
 .pricing .box-container .box .price {
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: var(--main);
   padding: .5rem;
 }
 .pricing .box-container .box p {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
   color: var(black);
   padding: .5rem;
 }
@@ -499,19 +502,19 @@ gap: 2rem;
 }
 
 .footer .box-container .box h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--main);
   padding: 1rem;
 }
 .footer .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.8;
   color: var(--white);
   padding: 1rem 0;
 }
 .footer .box-container .box .links {
   display: block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--white);
   padding: 1rem 0;
 }
