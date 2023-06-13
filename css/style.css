@@ -24,7 +24,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
-       /*Scrollbar  */
+ /*Scrollbar  */
 html::-webkit-scrollbar {
   width: 1rem;
 }
@@ -150,10 +150,6 @@ section {
   right: 2rem;
   transition: .4s linear;
 }
-.header .signup-form.active {
-  right: 2rem;
-  transition: .4s linear;
-}
 .header .login-form h3 {
   font-size: 2.2rem;
   color: var(--black);
@@ -161,23 +157,7 @@ section {
   margin-bottom: 0.7rem;
   text-align: center;
 }
-.header .signup-form h3 {
-  font-size: 2.2rem;
-  color: var(--black);
-  text-transform: uppercase;
-  margin-bottom: 0.7rem;
-  text-align: center;
-}
 .header .login-form .box {
-  font-size: 1.5rem;
-  padding: 1rem 1.2rem;
-  border: .1rem solid rgba(0, 0, 0, 0.1);
-  margin: .7rem 0;
-  color: var(--black);
-  width: 100%;
-  text-transform: none;
-}
-.header .signup-form .box {
   font-size: 1.5rem;
   padding: 1rem 1.2rem;
   border: .1rem solid rgba(0, 0, 0, 0.1);
@@ -210,11 +190,6 @@ section {
   width: 100%;
   text-align: center;
 }
-.header .signup-form .btn {
-  width: 100%;
-  text-align: center;
-}
-
 /* Home */
 .home {
   min-height: 100vh;
@@ -233,12 +208,6 @@ section {
   line-height: 1.4;
   font-weight: 400;
   font-family:'Delicious handrawn';
-}
-.home .wave {
-  position: absolute;
-  bottom: 0;left: 0;
-  width: 100%;
-  height: 12rem;
 }
 /* About */
 .about {
@@ -260,10 +229,10 @@ section {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px var(--main);
   transform-origin: top left;
-  transform: rotate(0.25turn);
+  transform: rotate(0.10turn);
   position: absolute;
-  top: 115%;
-  left: 48%;
+  top: 100%;
+  left: 36%;
   z-index: 1;
 }
 .about .box-container .image {
@@ -271,7 +240,7 @@ section {
 }
 .about .box-container .image img {
   width: 100%;
-  border-radius: 50rem;
+  border-radius: 50%;
 }
 .about .content {
   flex: 1 1 41rem;
@@ -383,9 +352,6 @@ gap: 2rem;
   font-size: 3rem;
   color: var(--main);
 }
-.animal .box-container box:is(:hover, :focus-within) .content {
-  transform: translateY(-20px);
-}
 /* Banner - short description */
 .banner {
   background: var(--bg);
@@ -442,17 +408,17 @@ gap: 2rem;
   border-radius: 51% 27% 47% 80% / 55% 44% 31% 80%;  /* undefined shape for img*/
 }
 .pricing .box-container .box h3 {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   color: var(--black);
   padding: 1rem;
 }
 .pricing .box-container .box .price {
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   color: var(--main);
   padding: .5rem;
 }
 .pricing .box-container .box p {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: var(black);
   padding: .5rem;
 }
@@ -594,14 +560,14 @@ gap: 2rem;
   font-weight: 500px;
   margin: 30px 0 10px;
 }
-.popup p {
+/* .popup p {
   font-size: 1.8rem;
   font-weight: 400px;
   text-align: center;
-}
-.hidden {
+} */
+/* .hidden {
   display: none;
-}
+} */
 .message-box {
   display: none;
   position: fixed;
