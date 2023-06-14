@@ -110,7 +110,7 @@ const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
 
 // About popup text box 
-let buttons = document.getElementsByClassName("btn");
+let buttons = document.getElementsByClassName("details-btn");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function() {
     let popup = this.nextElementSibling;

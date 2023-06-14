@@ -305,6 +305,13 @@ gap: 2rem;
 .about .box-container .box .content .btn {
  background-color: rgba(0, 0, 0, 0.5);
 }
+.details-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Review section */
 .reviews {
   background: papayawhip;
