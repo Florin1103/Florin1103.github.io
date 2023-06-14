@@ -221,7 +221,7 @@ section {
 }
 .about .deco-title {
   font-family: 'Delicious Handrawn', cursive;
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: 700;
   white-space: nowrap;
   line-height: 0.5;
@@ -229,10 +229,10 @@ section {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px var(--main);
   transform-origin: top left;
-  transform: rotate(0.10turn);
+  transform: rotate(0.25turn);
   position: absolute;
-  top: 100%;
-  left: 36%;
+  top: 115%;
+  left: 48%;
   z-index: 1;
 }
 .about .box-container .image {

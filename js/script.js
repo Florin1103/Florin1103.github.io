@@ -1,24 +1,26 @@
-// Login toggle
-let login = document.querySelector(".login-form"); 
+// Non-functional button until I find a use for it.
+//Login toggle
+// let login = document.querySelector(".login-form"); 
 
-document.querySelector("#login-btn").onclick = () =>{
-    login.classList.toggle('active');
-}
-let navbar = document.querySelector('.header .navbar');
-document.querySelector('#menu-btn').onclick = () =>{
-    login.classList.remove('active');
-    navbar.classList.toggle('active')
-}  
-document.addEventListener("click", (event) => {
-        if (!event.target.closest(".login-form") && !event.target.closest("#login-btn")) {
-        login.classList.remove('active');
-    }
-});
-document.addEventListener("click", (event) => {
-    if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
-        navbar.classList.remove('active')
-}
-});
+// document.querySelector("#login-btn").onclick = () =>{
+//     login.classList.toggle('active');
+// }
+// let navbar = document.querySelector('.header .navbar');
+// document.querySelector('#menu-btn').onclick = () =>{
+//     login.classList.remove('active');
+//     navbar.classList.toggle('active')
+// }  
+// document.addEventListener("click", (event) => {
+//         if (!event.target.closest(".login-form") && !event.target.closest("#login-btn")) {
+//         login.classList.remove('active');
+//     }
+// });
+// document.addEventListener("click", (event) => {
+//     if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
+//         navbar.classList.remove('active')
+// }
+// });
+
 
 // Gallery swiper
 let swiper = new Swiper(".gallery-slider", {
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
           textElement.style.transition = "transform 0.4s";
           textElement.style.transform = "translateX(0)"; 
         }, 300); 
-      }, 100);effect
+      }, 100);
     }, 4000);
   });
   

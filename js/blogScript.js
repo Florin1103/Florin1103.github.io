@@ -79,7 +79,6 @@ signupForm.addEventListener("submit", function(event) {
     email: email,
     password: password
   };
-
   accounts.push(newAccount);
 
   localStorage.setItem("accounts", JSON.stringify(accounts));
@@ -89,7 +88,6 @@ signupForm.addEventListener("submit", function(event) {
 
   sgnupForm.style.display = "none";
 });
-
 // Check if the user is logged in on page load
 window.addEventListener("load", function() {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -100,8 +98,11 @@ window.addEventListener("load", function() {
     loginForm.style.display = "none";
   }
 });
-
-
+// Log out form
+document.getElementById("username-display").addEventListener("click", function() {
+  let form = document.querySelector(".username-display");
+  form.classList.toggle("visible");
+});
 
 
 // Year automatically update
@@ -109,31 +110,50 @@ const yearSpan = document.getElementById('year');
 const currentYear = new Date().getFullYear();
 yearSpan.textContent = currentYear;
 
-// Chat popup text box 
+// About popup text box 
 
 let buttons = document.getElementsByClassName("btn");
+
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function() {
     let popup = this.nextElementSibling;
     popup.classList.add("show-popup");
+    disableOtherButtons(popup);
     popup.addEventListener("click", function() {
       this.classList.remove("show-popup");
+      enableAllButtons();
     });
   });
 }
+
+function disableOtherButtons(popup) {
+  let otherButtons = document.getElementsByClassName("btn");
+  for (let i = 0; i < otherButtons.length; i++) {
+    if (otherButtons[i].nextElementSibling !== popup) {
+      otherButtons[i].style.pointerEvents = "none";
+    }
+  }
+}
+
+function enableAllButtons() {
+  let allButtons = document.getElementsByClassName("btn");
+  for (let i = 0; i < allButtons.length; i++) {
+    allButtons[i].style.pointerEvents = "auto";
+  }
+}
+
 document.addEventListener("click", function(e) {
   if (!e.target.matches(".popup") && !e.target.matches(".btn")) {
     let popups = document.getElementsByClassName("popup");
-        for (let i = 0; i < popups.length; i++) {
+    for (let i = 0; i < popups.length; i++) {
       popups[i].classList.remove("show-popup");
+      enableAllButtons();
     }
   }
 });
-// Log out form
-document.getElementById("username-display").addEventListener("click", function() {
-  let form = document.querySelector(".username-display");
-  form.classList.toggle("visible");
-});
+
+
+
 
 
 // Review form
