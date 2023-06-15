@@ -1,25 +1,15 @@
-// Non-functional button until I find a use for it.
-//Login toggle
-// let login = document.querySelector(".login-form"); 
+//Burger navbar
+let navbar = document.querySelector('.header .navbar');
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+}
 
-// document.querySelector("#login-btn").onclick = () =>{
-//     login.classList.toggle('active');
-// }
-// let navbar = document.querySelector('.header .navbar');
-// document.querySelector('#menu-btn').onclick = () =>{
-//     login.classList.remove('active');
-//     navbar.classList.toggle('active')
-// }  
-// document.addEventListener("click", (event) => {
-//         if (!event.target.closest(".login-form") && !event.target.closest("#login-btn")) {
-//         login.classList.remove('active');
-//     }
-// });
-// document.addEventListener("click", (event) => {
-//     if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
-//         navbar.classList.remove('active')
-// }
-// });
+document.addEventListener("click", (event) => {
+    if (!event.target.closest(".header .navbar") && !event.target.closest("#menu-btn")) {
+        navbar.classList.remove('active');
+    }
+});
+
 
 
 // Gallery swiper
