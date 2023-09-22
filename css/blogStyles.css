@@ -78,6 +78,8 @@ section {
 }
 .btn:hover {
  cursor: pointer;
+ border-radius: 0 10px 0 10px;
+ transition: all 0.7 ease-out;
 }
 /* Header */
 .header {
